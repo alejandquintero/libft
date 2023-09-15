@@ -1,38 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nano <nano@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 21:33:04 by nano              #+#    #+#             */
-/*   Updated: 2023/09/14 21:14:01 by nano             ###   ########.fr       */
+/*   Created: 2023/09/14 20:50:29 by nano              #+#    #+#             */
+/*   Updated: 2023/09/14 21:11:57 by nano             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <string.h>
+//#include <strings.h>
 //#include <stdio.h>
 
-void	*ft_memset(void *s, int c, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*a;
-	size_t			i;
+	size_t	i;
 
 	i = 0;
-	a = s;
 	while (i < n)
 	{
-		a[i] = (unsigned char)c;
+		((char *)s)[i] = '\0';
 		i++;
 	}
-	return (s);
 }
 /*
 int	main(void)
-{	
-	char str[25] = "Hello world";
-	ft_memset(str, 45, 1);
-	//printf("mio%p\n", ft_memset(str, 45, 1));
-	//printf("org%p", memset(str, 45, 1));
-	return (0);
+{
+    char    str[12] = "Hello world";
+    printf("%s", str);
+    ft_bzero(str, 1);
+    printf("%s", str);
+    return (0);
 }*/
