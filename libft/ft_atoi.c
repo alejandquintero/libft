@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aquinter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/16 19:28:45 by aquinter          #+#    #+#             */
-/*   Updated: 2023/09/18 19:29:00 by aquinter         ###   ########.fr       */
+/*   Created: 2023/09/18 19:29:27 by aquinter          #+#    #+#             */
+/*   Updated: 2023/09/18 21:53:20 by aquinter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int	ft_atoi(const char *str)
 {
-	while (*s != '\0')
+	int	i;
+	int	num;
+	int	sign;
+
+	i = 0;
+	num = 0;
+	sign = 1;
+	while (str[i] == ' ' || str[i] == '\r' || str[i] == '\t'
+		|| str[i] == '\n' || str[i] == '\v' || str[i] == '\f')
+		i++;
+	if (str[i] == '-')
+		sign = -1;
+	if (str[i] == '-' || str[i] == '+')
+		i++;
+	while (ft_isdigit(str[i]))
 	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s++;
+		num = (num * 10) + (str[i] - 48);
+		i++;
 	}
-	if (*s == (char)c)
-		return ((char *)s);
-	return (NULL);
+	return (num * sign);
 }
