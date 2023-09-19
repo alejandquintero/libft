@@ -6,7 +6,7 @@
 /*   By: aquinter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 14:37:25 by aquinter          #+#    #+#             */
-/*   Updated: 2023/09/18 23:37:12 by aquinter         ###   ########.fr       */
+/*   Updated: 2023/09/19 21:55:14 by aquinter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 //     //char    s1[] = "lorem ipsum dolor sit amet";
 //     //char    s2[] = "dolor";
 //     char    *ptr1;
-//     char    *ptr2;
+//     //char    *ptr2;
 
 
 // 	// printf("-- ft_strlcat --\n");
@@ -78,14 +78,20 @@
 // 	// free(ptr2);
 // 	// printf("-- ft_calloc --\n\n");
 
-// 	printf("-- ft_strdup --\n");
-// 	ptr1 = ft_strdup(argv[1]);
-// 	ptr2 = strdup(argv[1]);
-// 	printf("mine: %p\n", ptr1);
-// 	printf("orig: %p\n", ptr2);
+// 	// printf("-- ft_strdup --\n");
+// 	// ptr1 = ft_strdup(argv[1]);
+// 	// ptr2 = strdup(argv[1]);
+// 	// printf("mine: %p\n", ptr1);
+// 	// printf("orig: %p\n", ptr2);
+// 	// free(ptr1);
+// 	// free(ptr2);
+// 	// printf("-- ft_strdup --\n\n");
+
+// 	printf("-- ft_substr --\n");
+// 	ptr1 = ft_substr(argv[1], 5, 6);
+// 	printf("res: %s\n", ptr1);
 // 	free(ptr1);
-// 	free(ptr2);
-// 	printf("-- ft_strdup --\n\n");
+// 	printf("-- ft_substr --\n\n");
 		
 // 	return (0);
 // }
