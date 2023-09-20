@@ -6,7 +6,7 @@
 /*   By: aquinter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 14:37:25 by aquinter          #+#    #+#             */
-/*   Updated: 2023/09/19 21:55:14 by aquinter         ###   ########.fr       */
+/*   Updated: 2023/09/20 22:40:49 by aquinter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,11 +87,17 @@
 // 	// free(ptr2);
 // 	// printf("-- ft_strdup --\n\n");
 
-// 	printf("-- ft_substr --\n");
-// 	ptr1 = ft_substr(argv[1], 5, 6);
+// 	// printf("-- ft_substr --\n");
+// 	// ptr1 = ft_substr(argv[1], 5, 6);
+// 	// printf("res: %s\n", ptr1);
+// 	// free(ptr1);
+// 	// printf("-- ft_substr --\n\n");
+
+// 	printf("-- ft_strtrim --\n");
+// 	ptr1 = ft_strtrim(argv[1], argv[2]);
 // 	printf("res: %s\n", ptr1);
 // 	free(ptr1);
-// 	printf("-- ft_substr --\n\n");
+// 	printf("-- ft_strtrim --\n\n");
 		
 // 	return (0);
 // }
