@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aquinter <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aquinter <aquinter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 14:37:25 by aquinter          #+#    #+#             */
-/*   Updated: 2023/09/20 22:40:49 by aquinter         ###   ########.fr       */
+/*   Updated: 2023/09/21 23:41:02 by aquinter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 // #include <string.h>
-// #include <bsd/string.h>
+// //#include <bsd/string.h>
 // #include "libft.h"
 // #include <ctype.h>
 
@@ -26,7 +26,7 @@
 // 	//char str[] = "there is so \0ma\0ny \0 \\0 in t\0his stri\0ng !\0\0\0\0";
 //     //char    s1[] = "lorem ipsum dolor sit amet";
 //     //char    s2[] = "dolor";
-//     char    *ptr1;
+//    //char    *ptr1;
 //     //char    *ptr2;
 
 
@@ -93,11 +93,31 @@
 // 	// free(ptr1);
 // 	// printf("-- ft_substr --\n\n");
 
-// 	printf("-- ft_strtrim --\n");
-// 	ptr1 = ft_strtrim(argv[1], argv[2]);
-// 	printf("res: %s\n", ptr1);
-// 	free(ptr1);
-// 	printf("-- ft_strtrim --\n\n");
-		
+// 	// printf("-- ft_strtrim --\n");
+// 	// ptr1 = ft_strtrim(argv[1], argv[2]);
+// 	// printf("res: %s\n", ptr1);
+// 	// free(ptr1);
+// 	// printf("-- ft_strtrim --\n\n");
+
+// 	int		i;
+// 	char	**ptr2;
+
+//  	ptr2 = ft_split(argv[1], 'c');
+	
+// 	i = 0;
+// 	printf("-- ft_split --\n");
+// 	while (ptr2[i] != '\0')
+// 	{
+// 		printf("Res: %s\n", ptr2[i]);
+// 		i++;
+// 	}
+// 	i = 0;
+// 	while (ptr2[i] != '\0')
+// 	{
+// 		free(ptr2[i]);
+// 		i++;
+// 	}
+// 	free(ptr2);
+// 	printf("-- ft_split --\n\n");	
 // 	return (0);
 // }
