@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aquinter <aquinter@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aquinter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 18:01:36 by aquinter          #+#    #+#             */
-/*   Updated: 2023/09/21 23:40:52 by aquinter         ###   ########.fr       */
+/*   Updated: 2023/09/22 22:34:58 by aquinter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static size_t	len_word(char const *s, char c)
 {
@@ -31,7 +30,7 @@ static size_t	words(char const *s, char c)
 	i = 0;
 	j = 0;
 	while (s[i] != '\0')
-	{		
+	{
 		if (s[i] != c)
 		{
 			i += len_word((s + i), c);
@@ -57,7 +56,7 @@ static void	free_memory(void **mem, size_t size)
 }
 
 char	**ft_split(char const *s, char c)
-{	
+{
 	int		j;
 	char	**strs;
 

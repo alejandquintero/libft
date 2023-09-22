@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aquinter <aquinter@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aquinter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 14:37:25 by aquinter          #+#    #+#             */
-/*   Updated: 2023/09/21 23:41:02 by aquinter         ###   ########.fr       */
+/*   Updated: 2023/09/23 01:27:02 by aquinter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,26 @@
 // #include "libft.h"
 // #include <ctype.h>
 
+// char	ft_transform(unsigned int i, char c)
+// {
+// 	if (i % 2 == 0)
+// 		return ft_tolower(c);
+// 	return ft_toupper(c);
+// }
+
 // int	main(int argc, char* argv[])
 // {
 // 	if (argc == 0)
 // 		return (0);
-	
+// 	if (!argv[0])
+// 		return (0);
+
 // 	// char	dest[10] = "a";
 // 	//char	src[] = "lorem ipsum dolor sit amet";
 // 	//char str[] = "there is so \0ma\0ny \0 \\0 in t\0his stri\0ng !\0\0\0\0";
 //     //char    s1[] = "lorem ipsum dolor sit amet";
 //     //char    s2[] = "dolor";
-//    //char    *ptr1;
+//    	char    *ptr1;
 //     //char    *ptr2;
 
 
@@ -99,25 +108,40 @@
 // 	// free(ptr1);
 // 	// printf("-- ft_strtrim --\n\n");
 
-// 	int		i;
-// 	char	**ptr2;
+// 	// int		i;
+// 	// char	**ptr2;
 
-//  	ptr2 = ft_split(argv[1], 'c');
+//  	// ptr2 = ft_split(argv[1], 'c');
 	
-// 	i = 0;
-// 	printf("-- ft_split --\n");
-// 	while (ptr2[i] != '\0')
-// 	{
-// 		printf("Res: %s\n", ptr2[i]);
-// 		i++;
-// 	}
-// 	i = 0;
-// 	while (ptr2[i] != '\0')
-// 	{
-// 		free(ptr2[i]);
-// 		i++;
-// 	}
-// 	free(ptr2);
-// 	printf("-- ft_split --\n\n");	
+// 	// i = 0;
+// 	// printf("-- ft_split --\n");
+// 	// while (ptr2[i] != '\0')
+// 	// {
+// 	// 	printf("Res: %s\n", ptr2[i]);
+// 	// 	i++;
+// 	// }
+// 	// i = 0;
+// 	// while (ptr2[i] != '\0')
+// 	// {
+// 	// 	free(ptr2[i]);
+// 	// 	i++;
+// 	// }
+// 	// free(ptr2);
+// 	// printf("-- ft_split --\n\n");
+
+// 	// printf("-- ft_itoa --\n\n");
+// 	// int	number = -233232;
+// 	// ptr1 = ft_itoa(number);
+// 	// printf("res: %s\n", ptr1);
+// 	// free(ptr1);
+// 	// printf("-- ft_itoa --\n");
+
+// 	printf("-- ft_strmapi --\n");
+// 	ptr1 = ft_strmapi("hello world!", ft_transform);
+// 	printf("res: %s\n", ptr1);
+// 	free(ptr1);
+// 	printf("-- ft_strmapi --\n");
+
 // 	return (0);
 // }
+
