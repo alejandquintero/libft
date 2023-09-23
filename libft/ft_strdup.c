@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aquinter <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aquinter <aquinter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 23:08:34 by aquinter          #+#    #+#             */
-/*   Updated: 2023/09/18 23:46:57 by aquinter         ###   ########.fr       */
+/*   Updated: 2023/09/23 20:09:05 by aquinter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ char	*ft_strdup(const char *s1)
 	if (!s2)
 		return (NULL);
 	s2 = ft_memcpy(s2, s1, len);
-	s2[len] = '\0';
+	s2[len - 1] = '\0';
 	return (s2);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aquinter <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aquinter <aquinter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 22:05:11 by aquinter          #+#    #+#             */
-/*   Updated: 2023/09/15 23:11:21 by aquinter         ###   ########.fr       */
+/*   Updated: 2023/09/23 20:08:30 by aquinter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,3 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
-/*
-#include <stdio.h>
-int	main(void)
-{
-	int	num;
-
-	num = 48;
-	printf("ORIGINAL: %d\n", isalnum(num));
-	printf("MIO: %d", ft_isalnum(num));
-	return (0);
-}*/

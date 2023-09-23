@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aquinter <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aquinter <aquinter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 21:22:31 by aquinter          #+#    #+#             */
-/*   Updated: 2023/09/15 23:11:33 by aquinter         ###   ########.fr       */
+/*   Updated: 2023/09/23 20:10:15 by aquinter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,3 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
-/*
-#include <stdio.h>
-int	main(void)
-{
-	int	num;
-
-	num = 97;
-	printf("ORIGINAL: %d\n", isalpha(num));
-	printf("MIO: %d", ft_isalpha(num));
-	return (0);
-}*/

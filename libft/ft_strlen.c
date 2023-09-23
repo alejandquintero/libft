@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aquinter <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aquinter <aquinter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 22:47:25 by aquinter          #+#    #+#             */
-/*   Updated: 2023/09/15 23:21:05 by aquinter         ###   ########.fr       */
+/*   Updated: 2023/09/23 20:10:23 by aquinter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,3 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-int	main(void)
-{
-	char	str[] = "8787";
-
-	printf("ORIG: %lu\n", strlen(str));
-	printf("MIO: %lu\n", ft_strlen(str));
-	return (0);
-}*/
