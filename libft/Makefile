@@ -6,7 +6,7 @@
 #    By: aquinter <aquinter@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/15 19:59:11 by aquinter          #+#    #+#              #
-#    Updated: 2023/09/23 23:24:34 by aquinter         ###   ########.fr        #
+#    Updated: 2023/09/25 21:06:29 by aquinter         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,8 @@ SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 	ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
 	ft_putnbr_fd.c
 
-SRC_BONUS = ft_lstnew.c ft_lstadd_front.c
+SRC_BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
+	ft_lstadd_back.c
 
 OBJ = ${SRC:%.c=%.o}
 
@@ -39,7 +40,7 @@ all: ${NAME}
 ${NAME} : ${OBJ}
 	${AR} ${NAME} ${OBJ}
 
-bonus: ${SRC_BONUS} ${OBJ_BONUS}
+bonus: ${OBJ_BONUS}
 	${AR} ${NAME} ${OBJ_BONUS}
 
 clean:
@@ -50,5 +51,5 @@ fclean: clean
 
 re:	fclean all
 
-.SILENT: all ${NAME} ${OBJ} bonus clean fclean
+.SILENT: all ${NAME} ${OBJ} ${OBJ_BONUS} bonus clean fclean
 .PHONY: all clean fclean re
