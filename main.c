@@ -6,7 +6,7 @@
 /*   By: aquinter <aquinter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 14:37:25 by aquinter          #+#    #+#             */
-/*   Updated: 2023/09/27 19:53:18 by aquinter         ###   ########.fr       */
+/*   Updated: 2023/09/28 22:48:08 by aquinter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,52 +24,52 @@
 // 	return ft_toupper(c);
 // }
 
-// void	ft_replace(unsigned int i, char *c)
+void	ft_replace(unsigned int i, char *c)
+{
+	if (i % 2 == 0)
+		*c = '4';
+	else
+		*c = '2';
+}
+
+// void	*content_m(void *c)
 // {
-// 	if (i % 2 == 0)
-// 		*c = '4';
-// 	else
-// 		*c = '2';
+// 	size_t	len;
+// 	char	*s2;
+
+// 	len = ft_strlen(c) + 4;
+// 	s2 = malloc(len * sizeof(char));
+// 	if (!s2)
+// 		return (NULL);
+// 	s2 = ft_memcpy(s2, (const void*)c, len);
+// 	s2[len - 4] = ' ';
+// 	s2[len - 3] = ':';
+// 	s2[len - 2] = 'D';
+// 	s2[len - 1] = '\0';
+// 	return (s2);
 // }
 
-void	*content_m(void *c)
-{
-	size_t	len;
-	char	*s2;
+// void	free_content(void *c)
+// {
+// 	if (c != NULL)
+// 		free(c);
+// }
 
-	len = ft_strlen(c) + 4;
-	s2 = malloc(len * sizeof(char));
-	if (!s2)
-		return (NULL);
-	s2 = ft_memcpy(s2, (const void*)c, len);
-	s2[len - 4] = ' ';
-	s2[len - 3] = ':';
-	s2[len - 2] = 'D';
-	s2[len - 1] = '\0';
-	return (s2);
-}
+// void	change_content(void *c)
+// {
+// 	int	i;
+// 	char *str;
 
-void	free_content(void *c)
-{
-	if (c != NULL)
-		free(c);
-}
-
-void	change_content(void *c)
-{
-	int	i;
-	char *str;
-
-	i = 0;
-	str = (char *)c;
-	write(1, "From write: ", 12);
-	while (str[i] != '\0')
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
-	write(1, "\n", 1);
-}
+// 	i = 0;
+// 	str = (char *)c;
+// 	write(1, "From write: ", 12);
+// 	while (str[i] != '\0')
+// 	{
+// 		write(1, &str[i], 1);
+// 		i++;
+// 	}
+// 	write(1, "\n", 1);
+// }
 
 int	main(int argc, char* argv[])
 {
@@ -87,24 +87,22 @@ int	main(int argc, char* argv[])
 //     //char    *ptr2;
 
 // printf("-- ft_bzero --\n");
-// char    str[12] = "Hello world";
-// printf("%s", str);
-// ft_bzero(str, 1);
-// printf("%s", str);
+// char    str[] = "Hello world";
+// printf("before %s\n", str);
+// ft_bzero(str, 12);
+// printf("after %s\n", str);
 // printf("-- ft_bzero --\n");
 
 // printf("-- ft_isalnum --\n");
-// char    str[12] = "Hello world";
-// printf("%s", str);
-// ft_isalnum(str, 1);
-// printf("%s", str);
+// char    str	 = 'd';
+// printf("%d\n", ft_isalnum(str));
 // printf("-- ft_isalnum --\n");
 
 // printf("-- ft_isalpha --\n");
 // int	num;
 // num = 97;
 // printf("ORIGINAL: %d\n", isalpha(num));
-// printf("MIO: %d", ft_isalpha(num));
+// printf("MIO: %d\n", ft_isalpha(num));
 // printf("-- ft_isalpha --\n");
 
 // printf("-- ft_isascii --\n");
@@ -164,116 +162,146 @@ int	main(int argc, char* argv[])
 // printf("MIO: %lu\n", ft_strlen(str));
 // printf("-- ft_strlen --\n");
 
+// printf("-- ft_strlcat --\n");
+// char	dest[10] = "a";
+// char	src[] = "lorem ipsum dolor sit amet";
+// printf("dst before: %s\n", dest);
+// printf("return value: %lu \n", ft_strlcat(dest, src, 10));
+// printf("dst after: %s \n", dest);
+// printf("-- ft_strlcat --\n");
 
-// 	// printf("-- ft_strlcat --\n");
-// 	// printf("dst before: %s\n", dest);
-// 	// printf("return value: %lu \n", ft_strlcat(dest, src, 1));
-// 	// printf("dst after: %s \n", dest);
-// 	// printf("-- ft_strlcat --\n");
-// 	// printf("-- ft_toupper --\n");
-// 	// printf("(a) -> %c | (z) -> %c | (&) -> %c \n", ft_toupper('a'), ft_toupper('z'), ft_toupper('&'));
-// 	// printf("-- ft_toupper --\n\n");
-// 	// printf("-- ft_tolower --\n");
-// 	// printf("(A) -> %c | (Z) -> %c | (&) -> %c \n", ft_tolower('A'), ft_tolower('Z'), ft_tolower('&'));
-// 	// printf("-- ft_tolower --\n\n");
+// printf("-- ft_toupper --\n");
+// printf("(a) -> %c | (z) -> %c | (&) -> %c \n", ft_toupper('a'), ft_toupper('z'), ft_toupper('&'));
+// printf("-- ft_toupper --\n\n");
 
-// 	// printf("-- ft_strchr --\n");
-// 	// printf("%s\n", ft_strchr(str, '\0'));
-// 	// printf("-- ft_strchr --\n\n");
+// printf("-- ft_tolower --\n");
+// printf("(A) -> %c | (Z) -> %c | (&) -> %c \n", ft_tolower('A'), ft_tolower('Z'), ft_tolower('&'));
+// printf("-- ft_tolower --\n\n");
 
-// 	// printf("-- ft_strrchr --\n");
-// 	// printf("%s\n", ft_strrchr(src, 't'));
-// 	// printf("-- ft_strrchr --\n\n");
+// printf("-- ft_strchr --\n");
+// //char str[] = "there is so \0ma\0ny \0 \\0 in t\0his stri\0ng !\0\0\0\0";
+// char str[] = "there is so";
 
-//     // printf("-- ft_strncmp --\n");
-// 	// printf("%d\n", ft_strncmp(s1, s2, 1));
-// 	// printf("-- ft_strncmp --\n\n");
+// printf("%s\n", ft_strchr(str, 'i'));
+// printf("-- ft_strchr --\n\n");
 
-// 	// printf("-- ft_memchr --\n");
-// 	// printf("mine: %s\n", ft_memchr(str, '\0', sizeof(str)));
-// 	// printf("orig: %s\n", memchr(str, '\0', sizeof(str)));
-// 	// printf("-- ft_memchr --\n\n");
+// printf("-- ft_strrchr --\n");
+// char str[] = "there tis so to";
+// printf("%s\n", ft_strrchr(str, 't'));
+// printf("-- ft_strrchr --\n\n");
+
+// printf("-- ft_strncmp --\n");
+// char    s1[] = "lorem ipsum dolor sit amet";
+// char    s2[] = "dolor";
+// printf("%d\n", ft_strncmp(s1, s2, 1));
+// printf("-- ft_strncmp --\n\n");
+
+// printf("-- ft_memchr --\n");
+// char    str[] = "lorem ips";
+// printf("mine: %s\n", ft_memchr(str, 'i', sizeof(str)));
+// printf("orig: %s\n", memchr(str, 'i', sizeof(str)));
+// printf("-- ft_memchr --\n\n");
 
 // printf("-- ft_memcmp --\n");
 // printf("mine: %d\n", ft_memcmp(argv[1], argv[2], 4));
 // printf("ori: %d\n", memcmp(argv[1], argv[2], 4));
 // printf("-- ft_memcmp --\n\n");
 
-// 	// printf("-- ft_strnstr --\n");
-// 	// printf("mine: %s\n", ft_strnstr(s1, s2,15));
-// 	// printf("orig: %s\n", strnstr(s1, s2, 15));
-// 	// printf("-- ft_strnstr --\n\n");
+// printf("-- ft_strnstr --\n");
+// char    s1[] = "lorem ipsum dolor sit amet";
+// char    s2[] = "dolor";
+// printf("mine: %s\n", ft_strnstr(s1, s2,20));
+// printf("orig: %s\n", strnstr(s1, s2, 20));
+// printf("-- ft_strnstr --\n\n");
 
-// 	// printf("-- ft_atoi --\n");
-// 	// printf("mine: %d\n", ft_atoi(argv[1]));
-// 	// printf("orig: %d\n", atoi(argv[1]));
-// 	// printf("-- ft_atoi --\n\n");
+// printf("-- ft_atoi --\n");
+// printf("mine: %d\n", ft_atoi(argv[1]));
+// printf("orig: %d\n", atoi(argv[1]));
+// printf("-- ft_atoi --\n\n");
 
-// 	// printf("-- ft_calloc --\n");
-// 	// ptr1 = ft_calloc(5, sizeof(char));
-// 	// ptr2 = calloc(5, sizeof(char));
-// 	// printf("mine: %p\n", ptr1);
-// 	// printf("orig: %p\n", ptr2);
-// 	// free(ptr1);
-// 	// free(ptr2);
-// 	// printf("-- ft_calloc --\n\n");
+// printf("-- ft_calloc --\n");
+// char    *ptr1;
+// char    *ptr2;
 
-// 	// printf("-- ft_strdup --\n");
-// 	// ptr1 = ft_strdup(argv[1]);
-// 	// ptr2 = strdup(argv[1]);
-// 	// printf("mine: %p\n", ptr1);
-// 	// printf("orig: %p\n", ptr2);
-// 	// free(ptr1);
-// 	// free(ptr2);
-// 	// printf("-- ft_strdup --\n\n");
+// ptr1 = ft_calloc(5, sizeof(char));
+// ptr2 = calloc(5, sizeof(char));
+// printf("mine: %p\n", ptr1);
+// printf("orig: %p\n", ptr2);
+// free(ptr1);
+// free(ptr2);
+// printf("-- ft_calloc --\n\n");
 
-// 	// printf("-- ft_substr --\n");
-// 	// ptr1 = ft_substr(argv[1], 5, 6);
-// 	// printf("res: %s\n", ptr1);
-// 	// free(ptr1);
-// 	// printf("-- ft_substr --\n\n");
+// printf("-- ft_strdup --\n");
+// char    *ptr1;
+// char    *ptr2;
+
+// ptr1 = ft_strdup(argv[1]);
+// ptr2 = strdup(argv[1]);
+// printf("mine: %p\n", ptr1);
+// printf("orig: %p\n", ptr2);
+// free(ptr1);
+// free(ptr2);
+// printf("-- ft_strdup --\n\n");
+
+// printf("-- ft_substr --\n");
+// char    *ptr1;
+
+// ptr1 = ft_substr(argv[1], 5, 6);
+// printf("res: %s\n", ptr1);
+// free(ptr1);
+// printf("-- ft_substr --\n\n");
 
 // printf("-- ft_strtrim --\n");
+// char    *ptr1;
+
 // ptr1 = ft_strtrim(argv[1], argv[2]);
 // printf("res: %s\n", ptr1);
 // free(ptr1);
 // printf("-- ft_strtrim --\n\n");
 
-// 	// int		i;
-// 	// char	**ptr2;
+// printf("-- ft_split --\n\n");
 
-//  // ptr2 = ft_split(argv[1], 'c');
-	
-// 	// i = 0;
-// 	// printf("-- ft_split --\n");
-// 	// while (ptr2[i] != '\0')
-// 	// {
-// 	// 	printf("Res: %s\n", ptr2[i]);
-// 	// 	i++;
-// 	// }
-// 	// i = 0;
-// 	// while (ptr2[i] != '\0')
-// 	// {
-// 	// 	free(ptr2[i]);
-// 	// 	i++;
-// 	// }
-// 	// free(ptr2);
-// 	// printf("-- ft_split --\n\n");
+// int		i;
+// char	**ptr2;
 
-// 	// printf("-- ft_itoa --\n\n");
-// 	// int	number = -233232;
-// 	// ptr1 = ft_itoa(number);
-// 	// printf("res: %s\n", ptr1);
-// 	// free(ptr1);
-// 	// printf("-- ft_itoa --\n");
+// ptr2 = ft_split(argv[1], 'c');
 
-// 	printf("-- ft_strmapi --\n");
-// 	ptr1 = ft_strmapi("hello world!", ft_transform);
-// 	printf("res: %s\n", ptr1);
-// 	free(ptr1);
-// 	printf("-- ft_strmapi --\n");
+// i = 0;
+// printf("-- ft_split --\n");
+// while (ptr2[i] != '\0')
+// {
+// 	printf("Res: %s\n", ptr2[i]);
+// 	i++;
+// }
+// i = 0;
+// while (ptr2[i] != '\0')
+// {
+// 	free(ptr2[i]);
+// 	i++;
+// }
+// free(ptr2);
+// printf("-- ft_split --\n\n");
+
+// printf("-- ft_itoa --\n\n");
+// int	number = -233232;
+// char *ptr1;
+
+// ptr1 = ft_itoa(number);
+// printf("res: %s\n", ptr1);
+// free(ptr1);
+// printf("-- ft_itoa --\n");
+
+// printf("-- ft_strmapi --\n");
+// char	*ptr1;
+
+// ptr1 = ft_strmapi("hello world!", ft_transform);
+// printf("res: %s\n", ptr1);
+// free(ptr1);
+// printf("-- ft_strmapi --\n");
 
 // printf("-- ft_striteri --\n");
+// char	*ptr1;
+
 // ptr1 = argv[1];
 // printf("before: %s\n", ptr1);
 // ft_striteri(ptr1, ft_replace);
@@ -549,37 +577,37 @@ int	main(int argc, char* argv[])
 	
 	// printf("-- ft_lstiter --\n");
 
-	printf("-- ft_lstmap --\n");
-	t_list	*lst1;
-	t_list	*lst2;
-	t_list 	*lst_res;
-	char	str1[] = "Hello 1";
-	char	str2[] = "Hello 2";
+	// printf("-- ft_lstmap --\n");
+	// t_list	*lst1;
+	// t_list	*lst2;
+	// t_list 	*lst_res;
+	// char	str1[] = "Hello 1";
+	// char	str2[] = "Hello 2";
 	
-	lst1 = malloc(sizeof(t_list));
-	lst1->content = str1;
-	lst1->next = NULL;
+	// lst1 = malloc(sizeof(t_list));
+	// lst1->content = str1;
+	// lst1->next = NULL;
 
-	lst2 = malloc(sizeof(t_list));
-	lst2->content = str2;
-	lst2->next = NULL;
+	// lst2 = malloc(sizeof(t_list));
+	// lst2->content = str2;
+	// lst2->next = NULL;
 
-	lst1->next = lst2;
+	// lst1->next = lst2;
 
-	printf("-- before lst1: %s --\n", lst1->content);
-	printf("-- before lst2: %s --\n", lst1->next->content);
+	// printf("-- before lst1: %s --\n", lst1->content);
+	// printf("-- before lst2: %s --\n", lst1->next->content);
 	
-	lst_res = ft_lstmap(lst1, content_m, free_content);
+	// lst_res = ft_lstmap(lst1, content_m, free_content);
 
-	printf("-- res node 1:  %s --\n", lst_res->content);
-	printf("-- res node 2: %s --\n", lst_res->next->content);
+	// printf("-- res node 1:  %s --\n", lst_res->content);
+	// printf("-- res node 2: %s --\n", lst_res->next->content);
 
-	ft_lstclear(&lst_res, free_content);
+	// ft_lstclear(&lst_res, free_content);
 	
-	free(lst1);
-	free(lst2);
+	// free(lst1);
+	// free(lst2);
 	
-	printf("-- ft_lstmap --\n");
+	// printf("-- ft_lstmap --\n");
 
 	return (0);
 }
