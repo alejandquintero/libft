@@ -196,6 +196,149 @@ Returns a pointer to the allocated memory. On error, returns NULL.
 ## ft_strdup
 ```
 char	*ft_strdup(const char *s1);
-
 ```
 Returns a pointer to a new string which is a duplicate of the string `s1`. Memory for the new string is obtained with malloc, and can be freed with free.
+
+## ft_substr
+```
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+```
+Reserve (with malloc(3)) and return a substring of the string `s`. The substring starts from index `start` and has a maximum length `len`.
+
+Returns the resulting substring or NULL if memory reservation fails.
+
+## ft_strjoin
+```
+char	*ft_strjoin(char const *s1, char const *s2);
+```
+Reserve (with malloc(3)) and return a new string, formed by the concatenation of `s1` and
+`s2`'.
+
+Returns the new string or NULL if memory reservation fails.
+
+## ft_strtrim
+```
+char	*ft_strtrim(char const *s1, char const *set);
+```
+Remove all characters from the string 'set' from the beginning and from the end of 's1', until find a character not belonging to 'set'. The resulting string is returned with a reservation of
+malloc(3)
+
+Returns the cut string or NULL if memory reservation fails.
+
+## ft_split
+```
+char	**ft_split(char const *s, char c);
+```
+Reserve (using malloc(3)) an array of strings resulting from separating the string `s` into substrings using the character `c` as a delimiter. The array must be terminated with a NULL pointer.
+
+Returns the array of new strings resulting from the separation. NULL if memory reservation fails.
+
+## ft_itoa
+```
+char	*ft_itoa(int n);
+```
+Using malloc(3), generate a string that represents the integer value received as an argument. Negative numbers have to be managed.
+
+Returns the string that represents the number. NULL if memory reservation fails.
+
+## ft_strmapi
+```
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+```
+To each character of the string `s`, apply the function `f` giving as parameters the index of each
+character inside `s` and the character itself. Generate a new string with the result of successive use of `f`
+
+Returns the string created after the correct use of `f` on each character. NULL if memory reservation fails.
+
+## ft_striteri
+```
+void	ft_striteri(char *s, void (*f)(unsigned int,char*));
+```
+To each character of the string `s`, apply the function `f` giving as parameters the index of each
+character within `s` and the address of itself character, which can be modified if necessary.
+
+## ft_putchar_fd
+```
+void	ft_putchar_fd(char c, int fd);
+```
+Send the character `c` to the file descriptor specified.
+
+## ft_putstr_fd
+```
+void	ft_putstr_fd(char *s, int fd);
+```
+Send the string `s` to the file descriptor specified.
+
+## ft_putendl_fd	
+```
+void	ft_putendl_fd(char *s, int fd);
+```
+Send the string `s` to the given file descriptor, followed by a line break.
+
+## ft_putnbr_fd	
+```
+void	ft_putnbr_fd(int n, int fd);
+```
+Sends the number `n` to the given file descriptor.
+
+## ft_lstnew	
+```
+t_list	*ft_lstnew(void *content);
+```
+Create a new node using malloc(3). The member variable `content` is initialized with the content of the `content` parameter. The variable `next`, with NULL.
+
+Returns the new node
+
+## ft_lstadd_front	
+```
+void	ft_lstadd_front(t_list **lst, t_list *new);
+```
+Add the `new` node to the beginning of the `lst` list.
+
+## ft_lstsize	
+```
+int	ft_lstsize(t_list *lst);
+```
+Counts the number of nodes in a list.
+
+Returns the length of list.
+
+## ft_lstlast	
+```
+t_list	*ft_lstlast(t_list *lst);
+```
+Returns the last node in the list.
+
+## ft_lstadd_back
+```
+void	ft_lstadd_back(t_list **lst, t_list *new);
+```
+
+Add the `new` node to the end of the `lst` list
+
+## ft_lstdelone	
+```
+void	ft_lstdelone(t_list *lst, void (*del)(void*));
+```
+Takes an `lst` node as a parameter and freed the memory of the content using the `del` function
+given as a parameter, in addition to releasing the node. The `next` memory should not be freed.
+
+## ft_lstclear	
+```
+void	ft_lstclear(t_list **lst, void (*del)(void*));
+```
+Delete and free the given `lst` node and all consecutive of that node, using the function `del` and free(3). In the end, the pointer to the list must be NULL.
+
+## ft_lstiter	
+```
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+```
+Iterates the list `lst` and applies the function `f` on the content of each node.
+
+## ft_lstmap	
+```
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *),void (*del)(void *));
+```
+Iterates the list `lst` and applies the function `f` to it content of each node. Create a resulting list of the correct and successive application of the function `f` over each node. The `del` function is used to delete the contents of a node, if you do lack.
+
+Returns the new list or NULL if memory reservation fails.
